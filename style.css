@@ -1,0 +1,78 @@
+/* --- Root & Theme Variables (Luxury Black & Gold) --- */
+:root {
+    --bg-obsidian-900: #090A0F;
+    --bg-obsidian-800: #11131C;
+    --gold-300: #F4D068;
+    --gold-400: #E6C200;
+    --gold-500: #D4AF37;
+    --gold-600: #AA7C11;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-obsidian-900);
+    color: #e2e8f0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Custom Gold Metallic Gradient Animation */
+.gold-gradient-text {
+    background: linear-gradient(135deg, #FFF099 0%, #D4AF37 40%, #AA7C11 80%, #F4D068 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: textShimmer 6s linear infinite;
+}
+
+@keyframes textShimmer {
+    0% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+    100% { background-position: 0% center; }
+}
+
+/* Glassmorphic Dark Card Styling */
+.glass-card {
+    background: rgba(17, 19, 28, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+    border-color: rgba(212, 175, 55, 0.5);
+    box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #090A0F;
+}
+::-webkit-scrollbar-thumb {
+    background: #332700;
+    border-radius: 4px;
+    border: 1px solid #D4AF37;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #D4AF37;
+
+    /* --- Timeline Date Fix for Desktop --- */
+@media (min-width: 1024px) {
+    #experience .relative.border-l-2 {
+        margin-left: 180px !important;
+    }
+}
+}
